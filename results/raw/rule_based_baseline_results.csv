@@ -1,0 +1,2 @@
+scenario,algorithm,total_simulated_energy_kwh,mean_comfort_deviation_c,comfort_rate_pct,mean_daily_episode_return,population_sd_daily_episode_return,eei_pct_points_per_kwh,peak_simulated_power_w,n_test_dates,n_test_steps
+baseline,Rule-Based,17.326163773148146,1.1614112839549084,94.21622726343757,-354.0366895772979,79.5699084722493,5.437800802128663,64.49444444444445,18,4893

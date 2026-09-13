@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript."
+title: "HVAC PPO vs DQN JOSCEX Reproducibility Repository"
+type: software
+authors:
+  - family-names: "Ikhsanudin"
+  - family-names: "Kusnawi"
+year: 2026
+version: "1.0.0"
+repository-code: ""
+preferred-citation:
+  type: article
+  title: "Comparative Analysis of Proximal Policy Optimization and Deep Q-Network for HVAC Energy–Comfort Control Using IoT Data"
+  authors:
+    - family-names: "Ikhsanudin"
+    - family-names: "Kusnawi"
+  year: 2026

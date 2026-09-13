@@ -1,0 +1,3 @@
+Algorithm,n_seeds,Mean training time (s),SD (s),95% CI (s),Mean completed timesteps,Note
+DQN,5,872.066,14.928,"[853.531, 890.602]",500000,DQN mean wall-clock training time was 18.9% lower than PPO in the baseline five-seed runs.
+PPO,5,1075.308,22.853,"[1046.932, 1103.684]",501760,"PPO exceeds the requested 500,000 timesteps because Stable-Baselines3 completes a full rollout of n_steps=2048."

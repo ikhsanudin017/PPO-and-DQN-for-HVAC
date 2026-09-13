@@ -1,0 +1,20 @@
+# Raw dataset is intentionally not committed to this repository
+sensor_data.csv
+data/sensor_data.csv
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+
+# Local rerun artifacts that can be regenerated
+outputs/partial_runs/
+outputs/smoke_test_report.csv

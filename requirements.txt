@@ -1,0 +1,9 @@
+stable-baselines3[extra]
+gymnasium
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+openpyxl

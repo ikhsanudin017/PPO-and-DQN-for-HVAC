@@ -1,0 +1,22 @@
+{
+  "features": [
+    "Suhu (C)",
+    "Kelembaban (%)",
+    "Daya (W)",
+    "Jumlah Orang"
+  ],
+  "data_min_": [
+    26.301234567901236,
+    47.03658536585366,
+    29.191666666666666,
+    0.0
+  ],
+  "data_max_": [
+    33.579518072289154,
+    81.1,
+    64.49444444444445,
+    5.0
+  ],
+  "clip": true,
+  "fit_scope": "training_dates_only"
+}

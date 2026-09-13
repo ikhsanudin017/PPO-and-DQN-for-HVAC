@@ -1,0 +1,19 @@
+JOSCEX POST-PROCESSING NOTE — NO RL MODEL WAS RETRAINED
+
+Statistical procedure
+For each experimental scenario, the daily metrics were first averaged across the five training seeds for each of the 18 test dates. PPO and DQN were then compared across the 18 paired test dates using two-sided Wilcoxon signed-rank tests. To control the family-wise error rate across the four tested daily metrics within each scenario, the four p-values were adjusted using Holm's step-down procedure. When all paired differences were zero, a Wilcoxon p-value was not defined and is reported as N/A. The file paired_daily_wilcoxon_holm.csv also contains a more conservative global Holm correction across all valid tests for transparency.
+
+Baseline multi-seed result
+Across five seeds, PPO used 18.995 ± 0.320 kWh of simulated energy versus 19.505 ± 0.116 kWh for DQN. The paired daily energy difference remained significant after Holm correction (adjusted p=3.05e-05). Mean comfort deviation was 0.239 ± 0.072 °C for PPO and 0.246 ± 0.069 °C for DQN, with no significant paired difference after Holm correction (adjusted p=0.4683). Comfort rate was 98.655 ± 0.905% for PPO and 99.060 ± 0.000% for DQN; the unadjusted paired p-value was 0.01796, but it was not significant after Holm correction (adjusted p=0.0539). Mean daily episode return was -109.56 ± 20.23 for PPO and -113.75 ± 19.00 for DQN, also without a significant paired difference after Holm correction (adjusted p=0.3081). Therefore, the five-seed baseline does not support a general claim that DQN is superior to PPO in comfort deviation or daily return.
+
+Reward sensitivity
+The PPO-DQN ordering changed when the reward specification was modified. With alpha=0.5, PPO had lower energy, lower comfort deviation, and a higher (less negative) daily return than DQN, with all three paired differences significant after Holm correction. With beta=1.0, PPO again had lower energy, lower comfort deviation, higher comfort rate, and a higher daily return, with all four adjusted p-values below 0.05. In contrast, when the comfort bonus was removed, DQN had lower comfort deviation, higher comfort rate, and a higher daily return, while PPO retained lower energy use; all four paired differences were significant after Holm correction. This demonstrates that the comparative ordering is sensitive to reward design.
+
+Environment sensitivity
+Under the -20% response scenario, PPO had lower energy, lower comfort deviation, and a higher daily return than DQN; comfort rate was identical and therefore had no defined Wilcoxon p-value. Under the +20% response scenario, PPO had lower energy, lower comfort deviation, higher comfort rate, and a higher daily return, and all four paired differences remained significant after Holm correction. These results provide local robustness evidence within the uncalibrated simulator, but they do not constitute physical validation of the HVAC dynamics.
+
+Rule-based reference
+The fixed rule-based controller used 17.326 kWh of simulated energy with mean comfort deviation 1.161 °C and a comfort rate of 94.216%. It should be described as a fixed-threshold operational reference rather than an objective-aligned competitor.
+
+Training time
+In the five baseline seeds, PPO required 1075.31 ± 22.85 s and DQN 872.07 ± 14.93 s. DQN's mean wall-clock time was approximately 18.9% lower. This is a replicated timing estimate for the local machine used in the rerun, not a hardware-independent algorithmic speed claim. PPO completed 501,760 timesteps because Stable-Baselines3 finishes a full 2,048-step rollout, whereas DQN completed the requested 500,000 timesteps.

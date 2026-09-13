@@ -1,0 +1,8 @@
+Metric,Unit,PPO mean ± SD (5 seeds),PPO 95% CI,DQN mean ± SD (5 seeds),DQN 95% CI,Rule-based fixed reference,Holm-adjusted p (PPO vs DQN),Interpretation
+Total simulated energy,kWh,18.995 ± 0.320,"[18.599, 19.392]",19.505 ± 0.116,"[19.361, 19.649]",17.326,3.05e-05,PPO–DQN difference significant after Holm correction (α=0.05).
+Mean comfort deviation,°C,0.239 ± 0.072,"[0.149, 0.329]",0.246 ± 0.069,"[0.161, 0.331]",1.161,0.4683,PPO–DQN difference not significant after Holm correction (α=0.05).
+Comfort rate,%,98.655 ± 0.905,"[97.532, 99.779]",99.060 ± 0.000,"[99.060, 99.060]",94.216,0.0539,PPO–DQN difference not significant after Holm correction (α=0.05).
+Mean daily episode return,return,-109.556 ± 20.231,"[-134.676, -84.435]",-113.746 ± 18.996,"[-137.333, -90.160]",-354.037,0.3081,PPO–DQN difference not significant after Holm correction (α=0.05).
+Population SD of daily episode return,return,23.336 ± 11.987,"[8.452, 38.220]",22.035 ± 6.352,"[14.148, 29.922]",79.570,N/A,Not tested with daily Wilcoxon.
+EEI,percentage points/kWh,5.195 ± 0.110,"[5.059, 5.331]",5.079 ± 0.030,"[5.041, 5.117]",5.438,N/A,Not tested with daily Wilcoxon.
+Peak simulated power,W,64.494 ± 0.000,"[64.494, 64.494]",64.494 ± 0.000,"[64.494, 64.494]",64.494,N/A,Not tested with daily Wilcoxon.

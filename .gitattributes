@@ -1,0 +1,6 @@
+*.ipynb text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+# Optional: if model checkpoints become large, enable Git LFS and uncomment:
+# models/*.zip filter=lfs diff=lfs merge=lfs -text
